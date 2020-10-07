@@ -192,7 +192,7 @@ window.onload = function () {
                             <font-awesome-icon icon="exclamation-triangle" />
                             </span>
                             <span class=action
-                                  v-if="event.status == 'failed uploading'"
+                                  v-if="event.status == 'failed uploading' || event.status == 'finished uploading'"
                                   v-on:click="retry_ingest(event)"
                                   title="Retry upload">
                                 <font-awesome-icon icon="sync" v-bind:class="{ 'fa-spin': event.processing }" />
